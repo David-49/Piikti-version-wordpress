@@ -41,7 +41,6 @@ font-style: italic; */
 } */
 .header {
     position: relative;
-    border: solid;
     height: 90px;
 }
 
@@ -58,7 +57,7 @@ body {
 }
 
 .logo {
-    height: 20px;
+    height: 50px;
 }
 
 .site__header__menu {
@@ -96,9 +95,14 @@ body {
 .image-banniere {
     width: 100%;
     height: 500px;
-    /* background-color: rgba(215, 44, 44, 0.2); */
     background-image: url(img/banniere.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+}
+
+.calque {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(215, 44, 44, 0.2);
 }

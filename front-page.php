@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<div class="image-banniere"></div>
+<div class="image-banniere"><div class="calque"></div></div>
 
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 

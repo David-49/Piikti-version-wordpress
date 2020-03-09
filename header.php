@@ -15,6 +15,8 @@
         <img src="<?php echo get_template_directory_uri(); ?>/img/logo2.svg" alt="Logo" class="logo">
       </a>
 
+      <?php get_template_part('searchForm'); ?>
+
       <?php wp_nav_menu(
     array(
         'theme_location' => 'main',
