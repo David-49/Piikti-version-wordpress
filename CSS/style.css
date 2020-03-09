@@ -1,0 +1,92 @@
+/*
+Theme Name: piikty
+Author: David DOGNIN
+Author URI: https://daviddognin.com
+Description: Mon premier thème !
+Requires at least: WordPress 5.0
+Version: 1.0
+*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Montserrat';
+}
+
+/* Quatro Bold font-family: quatro, sans-serif;
+font-weight: 700;
+font-style: normal;
+Quatro Bold Italic font-family: quatro, sans-serif;
+font-weight: 700;
+font-style: italic;
+Quatro Regular font-family: quatro, sans-serif;
+font-weight: 400;
+font-style: normal;
+Quatro Regular Italic font-family: quatro, sans-serif;
+font-weight: 400;
+font-style: italic; */
+/* .menu {
+    position: fixed;
+    top: 0px;
+}
+
+.admin-bar .menu {
+	top: 32px;
+} */
+.header {
+    position: relative;
+    border: solid;
+    height: 90px;
+}
+
+body {
+    height: 100vh;
+}
+
+.lienLogo {
+    position: absolute;
+    z-index: 9999;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.logo {
+    height: 60px;
+}
+
+.site__header__menu {
+    list-style: none;
+    float: left;
+    display: flex;
+    width: 30%;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    padding: 10px;
+    height: 100%;
+}
+
+.site__header__menu a {
+    color: black;
+    font-size: 1.8rem;
+    text-decoration: none;
+}
+
+.site__footer__menu {
+    position: absolute;
+    z-index: 9999;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.site__footer__menu a {
+    color: black;
+    font-size: 1.8rem;
+    text-decoration: none;
+}
