@@ -29,6 +29,14 @@
 
     <div class="ligneSeparation"></div>
 
+    <div class="menu-footer">
+        <?php wp_nav_menu(array( 'theme_location' => 'footer',
+        'container' => 'ul',
+        'menu_class' => 'site__footer__menu', )); ?>
+    </div>
+
+    <div class="ligneSeparation"></div>
+
     <div class="moyenContact">
         <h3 class="titreH3">Contactez-nous</h3>
         <p class="descMoyen">Email, réseaux sociaux</p>
@@ -44,11 +52,6 @@
 
     </div>
 
-    <!-- <div class="menu-footer">
-        <?php wp_nav_menu(array( 'theme_location' => 'footer',
-        'container' => 'ul',
-        'menu_class' => 'site__footer__menu', )); ?>
-    </div> -->
 </footer>
 <?php wp_footer(); ?>
 </body>

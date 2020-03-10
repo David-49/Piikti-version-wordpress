@@ -223,7 +223,7 @@ body {
     padding: 15px;
     display: flex;
     flex-direction: row;
-    align-items: center;
+    color: white;
 }
 
 .ligneSeparation {
@@ -231,11 +231,6 @@ body {
     border: solid white 0.8px;
 }
 
-/* .site__footer__menu a {
-    color: black;
-    font-size: 1.8rem;
-    text-decoration: none;
-} */
 .langue {
     display: flex;
     flex-direction: column;
@@ -248,23 +243,41 @@ body {
     height: 50px;
 }
 
+.menu-footer {
+    padding: 2px 10px 2px 10px;
+    width: 400px;
+    text-align: center;
+}
+
+.site__footer__menu {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 90%;
+}
+
+.site__footer__menu a {
+    font-size: 2rem;
+    text-decoration: none;
+    color: white;
+}
+
 .moyenPaiement, .moyenLivraison, .moyenContact {
     display: flex;
     flex-direction: column;
     text-align: center;
-    padding: 2px 100px 2px 100px;
+    padding: 2px 40px 2px 40px;
 }
 
 .titreH3, .descLivraison {
     font-size: 2rem;
     font-weight: bold;
     text-transform: uppercase;
-    color: white;
 }
 
 .descMoyen, .mailSite {
     font-size: 2rem;
-    color: white;
 }
 
 .descMoyen {
