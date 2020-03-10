@@ -39,32 +39,33 @@ font-style: italic; */
 .admin-bar .menu {
 	top: 32px;
 } */
-.header {
-    position: relative;
-    height: 90px;
-}
-
 body {
     height: 100vh;
 }
 
-.lienLogo {
-    position: absolute;
-    z-index: 9999;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+.header {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
 }
 
+.lienLogo {}
+
 .logo {
-    height: 50px;
+    height: 90px;
+}
+
+.nav {
+    width: 50%;
 }
 
 .site__header__menu {
     list-style: none;
     float: left;
     display: flex;
-    width: 30%;
+    width: 100%;
     justify-content: space-between;
     align-items: center;
     margin: auto;
@@ -76,6 +77,11 @@ body {
     color: black;
     font-size: 1.8rem;
     text-decoration: none;
+    font-family: quatro, sans-serif;
+    font-weight: 700;
+    font-style: italic;
+    font-size: 3rem;
+    border-bottom: solid #ee6e6b;
 }
 
 .site__footer__menu a {
@@ -84,15 +90,21 @@ body {
     text-decoration: none;
 }
 
-/* .image-banniere {
-    width: 100%;
-    height: 500px;
-    background-image: url(img/banniere.jpg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+.info-connexion {
+    position: absolute;
+    z-index: 9999;
+    right: 100px;
+    top: 40%;
+    transform: translateY(-50%);
+    width: 120px;
+    display: flex;
+    justify-content: space-between;
 }
-*/
+
+.logoUser, .logoCaddie {
+    height: 40px;
+}
+
 .cadreImage {
     width: 100%;
     height: 500px;

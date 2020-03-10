@@ -12,19 +12,27 @@
     <header class="header">
 
       <a href="<?php echo home_url('/'); ?>" class="lienLogo">
-        <img src="<?php echo get_template_directory_uri(); ?>/img/logo2.svg" alt="Logo" class="logo">
+        <img src="<?php echo get_template_directory_uri(); ?>/img/logo.svg" alt="Logo" class="logo">
       </a>
 
-      <?php get_template_part('searchForm'); ?>
+      <div class="info-connexion">
+          <img src="<?php echo get_template_directory_uri(); ?>/img/accueil/user.svg" alt="" class="logoUser">
+          <img src="<?php echo get_template_directory_uri(); ?>/img/accueil/supermarket.svg" alt="" class="logoCaddie">
+      </div>
 
-      <?php wp_nav_menu(
+      <!-- <?php get_template_part('searchForm'); ?> -->
+
+
+        <nav class="nav">
+            <?php wp_nav_menu(
     array(
-        'theme_location' => 'main',
-        'container' => 'ul',
-        'menu_class' => 'site__header__menu',
-       )
+                    'theme_location' => 'main',
+                    'container' => 'ul',
+                    'menu_class' => 'site__header__menu',
+                )
 );
-    ?>
+            ?>
+        </nav>
 
 
     </header>

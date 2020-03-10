@@ -1,7 +1,5 @@
 <?php get_header(); ?>
 
-<!-- <div class="image-banniere"><div class="calque"></div></div> -->
-
 <?php
 $picture_ID = get_field('banniere');// On récupère cette fois l'ID
 $url = wp_get_attachment_image_src($picture_ID, 'post-thumbnail');
