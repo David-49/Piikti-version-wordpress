@@ -19,6 +19,10 @@ html {
     font-style: normal;
 }
 
+li {
+    list-style: none;
+}
+
 /* Quatro Bold font-family: quatro, sans-serif;
 font-weight: 700;
 font-style: normal;
@@ -48,7 +52,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 10px;
+    padding: 20px;
 }
 
 .lienLogo {}
@@ -62,7 +66,6 @@ body {
 }
 
 .site__header__menu {
-    list-style: none;
     float: left;
     display: flex;
     width: 100%;
@@ -82,12 +85,6 @@ body {
     font-style: italic;
     font-size: 3rem;
     border-bottom: solid #ee6e6b;
-}
-
-.site__footer__menu a {
-    color: black;
-    font-size: 1.8rem;
-    text-decoration: none;
 }
 
 .info-connexion {
@@ -121,7 +118,7 @@ body {
     bottom: 0;
     left: 0;
     right: 0;
-    z-index: 9998;
+    z-index: 9997;
 }
 
 .calque {
@@ -133,5 +130,175 @@ body {
     bottom: 0;
     left: 0;
     right: 0;
+    z-index: 9998;
+}
+
+.blocDesc {
+    position: absolute;
     z-index: 9999;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: transparent;
+    color: white;
+    width: 50%;
+}
+
+.titrePageHome, .descSite {
+    font-size: 3.9rem;
+    font-weight: 700;
+    font-style: normal;
+    text-align: center;
+}
+
+.descSite span {
+    font-style: italic;
+}
+
+.lienDesc {
+    text-decoration: none;
+    color: white;
+    border: solid white;
+    padding: 10px;
+    font-size: 2.9rem;
+    font-weight: bold;
+    margin-top: 30px;
+}
+
+.blocImageAccueil {
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    padding: 40px;
+    width: 90%;
+}
+
+.blocImagecadre {
+    height: 863px;
+    width: 464px;
+    margin: 15px;
+    position: relative;
+}
+
+.blocImagecadre img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.calqueNoir {
+    position: absolute;
+    z-index: 9998;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(10, 10, 10, 0.15);
+}
+
+.titreImage {
+    position: absolute;
+    z-index: 9999;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-family: quatro, sans-serif;
+    font-weight: 700;
+    font-style: italic;
+    font-size: 5.6rem;
+}
+
+.footer {
+    background-color: #ee6e6b;
+    padding: 15px;
+    display: flex;
+    flex-direction: row;
+}
+
+.site__footer__menu a {
+    color: black;
+    font-size: 1.8rem;
+    text-decoration: none;
+}
+
+.langue {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 190px;
+    align-self: flex-start;
+    padding: 0 25px 0 15px;
+}
+
+.drapeau {
+    height: 50px;
+}
+
+.moyenPaiement {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 100px 0 100px;
+    /* width: 25%; */
+    border-left: solid white 1px;
+    border-right: solid white 1px;
+}
+
+.titreH3, .descLivraison {
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
+}
+
+.descMoyen, .mailSite {
+    font-size: 2rem;
+    color: white;
+}
+
+.descMoyen {
+    padding: 5px;
+}
+
+.logoPaiement {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    align-items: center;
+}
+
+.paiement {
+    height: 100px;
+    margin: 10px;
+}
+
+.moyenLivraison {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 100px 0 100px;
+    border-right: solid white 1px;
+}
+
+.logoFedex {
+    height: 80px;
+}
+
+.moyenContact {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 100px 0 100px;
+}
+
+.blocMail {
+    border-bottom: solid white 1px;
+    margin-top: 20px;
 }

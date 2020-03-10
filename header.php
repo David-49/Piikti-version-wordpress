@@ -20,7 +20,7 @@
           <img src="<?php echo get_template_directory_uri(); ?>/img/accueil/supermarket.svg" alt="" class="logoCaddie">
       </div>
 
-      <!-- <?php get_template_part('searchForm'); ?> -->
+    
 
 
         <nav class="nav">
