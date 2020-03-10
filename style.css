@@ -218,20 +218,24 @@ body {
     padding: 15px;
     display: flex;
     flex-direction: row;
+    align-items: center;
 }
 
-.site__footer__menu a {
+.ligneSeparation {
+    height: 220px;
+    border: solid white 0.8px;
+}
+
+/* .site__footer__menu a {
     color: black;
     font-size: 1.8rem;
     text-decoration: none;
-}
-
+} */
 .langue {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 190px;
-    align-self: flex-start;
+    height: 220px;
     padding: 0 25px 0 15px;
 }
 
@@ -239,14 +243,11 @@ body {
     height: 50px;
 }
 
-.moyenPaiement {
+.moyenPaiement, .moyenLivraison, .moyenContact {
     display: flex;
     flex-direction: column;
     text-align: center;
-    padding: 0 100px 0 100px;
-    /* width: 25%; */
-    border-left: solid white 1px;
-    border-right: solid white 1px;
+    padding: 2px 100px 2px 100px;
 }
 
 .titreH3, .descLivraison {
@@ -275,30 +276,39 @@ body {
 }
 
 .paiement {
-    height: 100px;
+    height: 40px;
     margin: 10px;
-}
-
-.moyenLivraison {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    padding: 0 100px 0 100px;
-    border-right: solid white 1px;
 }
 
 .logoFedex {
     height: 80px;
 }
 
-.moyenContact {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    padding: 0 100px 0 100px;
+.p2-descLivraison {
+    margin-top: 20px;
 }
 
 .blocMail {
     border-bottom: solid white 1px;
     margin-top: 20px;
+    padding-bottom: 6px;
+    display: flex;
+    align-items: center;
+}
+
+.logoMail {
+    height: 30px;
+    margin-left: 30px;
+}
+
+.logoRS {
+    margin-top: 18px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.reseauSociaux {
+    height: 50px;
+    margin: 0 16px 0 16px;
 }
