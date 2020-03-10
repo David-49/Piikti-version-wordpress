@@ -23,6 +23,10 @@ li {
     list-style: none;
 }
 
+a {
+    text-decoration: none;
+}
+
 /* Quatro Bold font-family: quatro, sans-serif;
 font-weight: 700;
 font-style: normal;
@@ -211,6 +215,7 @@ body {
     font-weight: 700;
     font-style: italic;
     font-size: 5.6rem;
+    text-transform: uppercase;
 }
 
 .footer {
@@ -273,6 +278,7 @@ body {
     flex-wrap: wrap;
     width: 100%;
     align-items: center;
+    margin-top: 15px;
 }
 
 .paiement {

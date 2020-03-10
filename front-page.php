@@ -24,7 +24,7 @@ $url = wp_get_attachment_image_src($picture_ID, 'post-thumbnail');
     ?>
 
     <div class="blocImagecadre"><img src="<?php echo $url[0]; ?>" alt=""><div class="calqueNoir"></div>
-    <p class="titreImage">TENDANCES</p>
+    <a href="<?php bloginfo('url') ?>/tendances" class="titreImage">TENDANCES</a>
     </div>
 
     <?php
@@ -33,7 +33,7 @@ $url = wp_get_attachment_image_src($picture_ID, 'post-thumbnail');
     ?>
 
     <div class="blocImagecadre"><img src="<?php echo $url[0]; ?>" alt=""><div class="calqueNoir"></div>
-    <p class="titreImage">PRODUITS</p>
+    <a href="<?php bloginfo('url') ?>/produits" class="titreImage">PRODUITS</a>
     </div>
 
     <?php
@@ -42,21 +42,12 @@ $url = wp_get_attachment_image_src($picture_ID, 'post-thumbnail');
     ?>
 
     <div class="blocImagecadre"><img src="<?php echo $url[0]; ?>" alt=""><div class="calqueNoir"></div>
-    <p class="titreImage">LES CREATEURS</p>
+    <a href="<?php bloginfo('url') ?>/les-createurs" class="titreImage">LES CREATEURS</a>
     </div>
 
 </div>
 
 
-<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-
-
-
-    <div class="slide">
-      <?php the_content(); ?>
-    </div>
-
-<?php endwhile; endif; ?>
 
 
 <?php get_footer(); ?>
