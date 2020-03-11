@@ -4,7 +4,7 @@
 $picture_ID = get_field('banniere');// On récupère cette fois l'ID
 $url = wp_get_attachment_image_src($picture_ID, 'post-thumbnail');
 ?>
-    <div class="cadreImage"><img src="<?php echo $url[0]; ?>" class="image-banniere">
+<div class="cadreImage"><img src="<?php echo $url[0]; ?>" class="image-banniere">
     <div class="calque"></div>
 
     <div class="blocDesc">
