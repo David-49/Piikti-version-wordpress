@@ -23,8 +23,17 @@ register_nav_menus(array(
 register_sidebar(array(
     'id' => 'blog-sidebar',
     'name' => 'Actualité',
-  'before_widget'  => '<div class="site__sidebar__widget %2$s">',
-  'after_widget'  => '</div>',
-  'before_title' => '<p class="site__sidebar__widget__title">',
-  'after_title' => '</p>',
+    'before_widget'  => '<div class="site__sidebar__widget %2$s">',
+    'after_widget'  => '</div>',
+    'before_title' => '<p class="site__sidebar__widget__title">',
+    'after_title' => '</p>',
 ));
+
+function modify_user_champ($user_contact)
+//Ajout champ Age pour l'ajout d'un utilisateur
+{
+    $user_contact['age'] = ('Age');
+    return $user_contact;
+}
+
+add_filter('user_contactmethods', 'modify_user_champ');
