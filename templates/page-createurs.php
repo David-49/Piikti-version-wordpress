@@ -41,8 +41,9 @@ if (!empty($createurs)) {
         $userPhoto = $createur->ID;
         // var_dump($userPhoto);
         //printing basic infos
-        echo "<a href='".bloginfo('url')."/profil/?user_id=".$userPhoto."' class='cadrePhotoCreateur'>";
-        // echo "<a href='".the_permalink($userPhoto)."' class='cadrePhotoCreateur'>";
+        // echo "<a href='".bloginfo('url')."/profil/?user_id=".$userPhoto."' class='cadrePhotoCreateur'>";?>
+        <a href='<?php echo get_permalink(84)."?user_id=".$userPhoto; ?>' class='cadrePhotoCreateur'>
+        <?php
         mt_profile_img(
             $userPhoto,
             array(

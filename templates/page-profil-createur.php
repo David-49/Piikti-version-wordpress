@@ -7,43 +7,42 @@
 <?php get_header(); ?>
 
 <?php
-// Create the WP_User_Query object
-$wp_user_query = new WP_User_Query(array(
-    'role' => 'Créateurs',
-    'order' => 'ASC',
-    'orderby' => 'display_name'
-));
 
-// Get the results
-$createurs = $wp_user_query->get_results();
+if (!empty($_GET['user_id'])) {
+    $get_id = htmlspecialchars($_GET['user_id']);
 
-// Looping createurs
-if (!empty($createurs)) {
-    echo '<ul>';
-    foreach ($createurs as $createur) {
-        // get all the user's data
-        $user_info = get_userdata($createur->ID);
-        $userKK = $createur->ID;
-        //printing basic infos
-        echo '<li>';
+    // Create the WP_User_Query object
+    $wp_user_query = new WP_User_Query(array(
+        'role' => 'Créateurs',
+        'orderby' => 'display_name'
+    ));
+
+    // Get the results
+    $createurs = $wp_user_query->get_results();
+
+    // Looping createurs
+    if (!empty($createurs)) {
+        $user_info = get_userdata($get_id);
+
         mt_profile_img(
-            $userKK,
+            $get_id,
             array(
-                'size' => 'thumbnail',
-                'attr' => array( 'alt' => 'Alternative Text' ),
+                'size' => 'large',
+                'attr' => array( 'alt' => 'photo de profil des créateurs', 'class' => 'photoCreateursProfil' ),
                 'echo' => true,
             )
         );
-        echo $user_info->first_name;
-        echo $user_info->last_name;
-        echo $user_info->age;
+        echo "<div class='blocinfoCreateursProfil'>
+        <p class='nomCreateursProfil'>".$user_info->first_name." ".strtoupper($user_info->last_name)."</p>
+        <p class='ageCreateursProfil'>".$user_info->age."</p>
+        </div>";
         echo $user_info->user_email;
         echo $user_info->description;
-        echo '</li>';
     }
-    echo '</ul>';
 }
 
 ?>
+
+
 
 <?php get_footer(); ?>
