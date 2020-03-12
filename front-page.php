@@ -24,7 +24,7 @@ $url = wp_get_attachment_image_src($picture_ID, 'post-thumbnail');
     ?>
 
     <div class="blocImagecadre"><img src="<?php echo $url[0]; ?>" alt=""><div class="calqueNoir"></div>
-    <a href="<?php bloginfo('url') ?>/tendances" class="titreImage">TENDANCES</a>
+    <a href="<?php echo get_permalink(17); ?>" class="titreImage"><?php echo get_the_title(17); ?></a>
     </div>
 
     <?php
@@ -33,7 +33,7 @@ $url = wp_get_attachment_image_src($picture_ID, 'post-thumbnail');
     ?>
 
     <div class="blocImagecadre"><img src="<?php echo $url[0]; ?>" alt=""><div class="calqueNoir"></div>
-    <a href="<?php bloginfo('url') ?>/produits" class="titreImage">PRODUITS</a>
+    <a href="<?php echo get_permalink(101); ?>" class="titreImage"><?php echo get_the_title(101); ?></a>
     </div>
 
     <?php
@@ -42,7 +42,7 @@ $url = wp_get_attachment_image_src($picture_ID, 'post-thumbnail');
     ?>
 
     <div class="blocImagecadre"><img src="<?php echo $url[0]; ?>" alt=""><div class="calqueNoir"></div>
-    <a href="<?php bloginfo('url') ?>/les-createurs" class="titreImage">LES CREATEURS</a>
+    <a href="<?php echo get_permalink(19); ?>" class="titreImage"><?php echo get_the_title(19); ?>S</a>
     </div>
 
 </div>

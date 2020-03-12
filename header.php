@@ -12,12 +12,12 @@
     <header class="header">
 
       <a href="<?php echo home_url('/'); ?>" class="lienLogo">
-        <img src="<?php echo get_template_directory_uri(); ?>/img/logo.svg" alt="Logo" class="logo">
+        <img src="<?php echo get_template_directory_uri(); ?>/img/logo.svg" alt="Logo" class="logoPiikti">
       </a>
 
       <div class="info-connexion">
-          <img src="<?php echo get_template_directory_uri(); ?>/img/accueil/user.svg" alt="" class="logoUser">
-          <img src="<?php echo get_template_directory_uri(); ?>/img/accueil/supermarket.svg" alt="" class="logoCaddie">
+          <img src="<?php echo get_template_directory_uri(); ?>/img/accueil/user.svg" class="logoUser">
+          <img src="<?php echo get_template_directory_uri(); ?>/img/accueil/supermarket.svg" class="logoCaddie">
       </div>
 
 

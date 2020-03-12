@@ -59,10 +59,8 @@ body {
     padding: 20px;
 }
 
-.lienLogo {}
-
-.logo {
-    height: 90px;
+.logoPiikti {
+    height: 90px !important;
 }
 
 .nav {
@@ -103,7 +101,7 @@ body {
 }
 
 .logoUser, .logoCaddie {
-    height: 40px;
+    height: 40px !important;
 }
 
 .cadreImage {
@@ -232,15 +230,15 @@ body {
 }
 
 .langue {
-    display: flex;
+    display: flex !important;
     flex-direction: column;
     justify-content: space-between;
-    height: 220px;
+    height: 220px !important;
     padding: 0 25px 0 15px;
 }
 
 .drapeau {
-    height: 50px;
+    height: 50px !important;
 }
 
 .menu-footer {
@@ -295,12 +293,12 @@ body {
 }
 
 .paiement {
-    height: 40px;
+    height: 40px !important;
     margin: 10px;
 }
 
 .logoFedex {
-    height: 80px;
+    height: 80px !important;
 }
 
 .p2-descLivraison {
@@ -316,7 +314,7 @@ body {
 }
 
 .logoMail {
-    height: 30px;
+    height: 30px !important;
     margin-left: 30px;
 }
 
@@ -328,7 +326,7 @@ body {
 }
 
 .reseauSociaux {
-    height: 50px;
+    height: 50px !important;
     margin: 0 16px 0 16px;
 }
 
@@ -423,4 +421,145 @@ body {
     left: 50%;
     transform: translateX(-50%);
     bottom: 15%;
+}
+
+/*******************************************************************************/
+/*                             Page Profil créateur                            */
+/*******************************************************************************/
+.cadreProfil {
+    position: relative;
+    margin: 10px 0 30px 0;
+}
+
+.cadrePhotoProfil {
+    height: 585px;
+    width: 400px;
+    position: absolute;
+    left: 30px;
+    top: 30px;
+}
+
+.photoCreateursProfil {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.blocinfoCreateursProfil, .descProfil {
+    width: 60%;
+    margin-left: 28%;
+}
+
+.blocinfoCreateursProfil {
+    padding-top: 30px;
+}
+
+.blocRouge, .blocDescription {
+    height: 300px;
+}
+
+.descProfil {
+    line-height: 45px;
+    width: 70%;
+}
+
+.blocRouge {
+    background-color: #ee6e6b;
+    /* padding: 15px; */
+}
+
+.blocDescription {
+    padding: 20px 0 20px 0;
+    font-size: 3rem;
+}
+
+.blocinfoCreateursProfil {
+    color: white;
+    width: auto;
+}
+
+.ageCreateursProfil, .emailCreateur, .nbProduitCreateur {
+    margin: 20px 0 20px 0;
+}
+
+.nomCreateursProfil, .ageCreateursProfil {
+    font-size: 3.1rem;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.ageCreateursProfil {
+    font-size: 3rem;
+}
+
+.nbProduitCreateur {
+    font-size: 1.9rem;
+}
+
+.emailCreateur {
+    font-size: 1.9rem;
+    text-decoration: underline white;
+}
+
+.logoRSProfil {
+    display: flex;
+}
+
+.reseauSociauxProfil {
+    height: 50px;
+    margin: 0 16px 0 16px;
+}
+
+.mesProduits {
+    margin-top: 100px;
+}
+
+.titreProduit {
+    font-size: 3.5rem;
+    font-style: italic;
+    font-weight: 700;
+    text-align: center;
+    color: #ee6e6b;
+    width: 40%;
+    margin: auto;
+    border-bottom: solid #ee6e6b;
+    margin-bottom: 20px;
+}
+
+.titreEspaceCom {
+    font-size: 3rem;
+    color: #ee6e6b;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: underline #ee6e6b;
+}
+
+.formCommentaire {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.espaceMessage, .boutonEnvoyer {
+    margin: 15px;
+}
+
+.espaceMessage {
+    width: 821px;
+    height: 189px;
+    padding: 8px;
+    font-size: 2.3rem;
+}
+
+.boutonEnvoyer {
+    background-color: #ee6e6b;
+    padding: 10px;
+    font-size: 3rem;
+    font-weight: 700;
+    font-style: italic;
+    color: white;
+    border: none;
 }
