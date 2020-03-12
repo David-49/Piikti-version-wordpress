@@ -6,6 +6,29 @@ add_theme_support('post-thumbnails');
 // Ajouter automatiquement le titre du site dans l'en-tête du site
 add_theme_support('title-tag');
 
+// function mytheme_add_woocommerce_support()
+// {
+//     add_theme_support('woocommerce');
+// }
+// add_action('after_setup_theme', 'mytheme_add_woocommerce_support');
+
+
+/**
+ * Set WooCommerce image dimensions upon theme activation
+ */
+// Remove each style one by one
+add_filter('woocommerce_enqueue_styles', 'jk_dequeue_styles');
+function jk_dequeue_styles($enqueue_styles)
+{
+    unset($enqueue_styles['woocommerce-general']);	// Remove the gloss
+    unset($enqueue_styles['woocommerce-layout']);		// Remove the layout
+    unset($enqueue_styles['woocommerce-smallscreen']);	// Remove the smallscreen optimisation
+    return $enqueue_styles;
+}
+
+// Or just remove them all in one line
+add_filter('woocommerce_enqueue_styles', '__return_false');
+
 function init_styles()
 {
     wp_enqueue_style('normalize', get_template_directory_uri().'/normalize.css');

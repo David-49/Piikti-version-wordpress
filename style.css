@@ -563,3 +563,18 @@ body {
     color: white;
     border: none;
 }
+
+/*******************************************************************************/
+/*                             Page Produit catégorie                            */
+/*******************************************************************************/
+.produitCatégorie {
+    padding: 20px;
+    width: 100%;
+}
+
+.blocPhotoCategorie {
+    margin: auto;
+    width: 65%;
+    display: flex;
+    justify-content: space-around;
+}
