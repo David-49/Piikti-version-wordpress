@@ -16,6 +16,7 @@ $url = wp_get_attachment_image_src($picture_ID, 'post-thumbnail');
 
 </div>
 
+
 <div class="blocImageAccueil">
 
     <?php
@@ -28,7 +29,7 @@ $url = wp_get_attachment_image_src($picture_ID, 'post-thumbnail');
     </div>
 
     <?php
-    $picture_ID = get_field('produits');// On récupère cette fois l'ID
+    $picture_ID = get_field('produit');// On récupère cette fois l'ID
     $url = wp_get_attachment_image_src($picture_ID, 'post-thumbnail');
     ?>
 
@@ -42,7 +43,7 @@ $url = wp_get_attachment_image_src($picture_ID, 'post-thumbnail');
     ?>
 
     <div class="blocImagecadre"><img src="<?php echo $url[0]; ?>" alt=""><div class="calqueNoir"></div>
-    <a href="<?php echo get_permalink(19); ?>" class="titreImage"><?php echo get_the_title(19); ?>S</a>
+    <a href="<?php echo get_permalink(21); ?>" class="titreImage"><?php echo get_the_title(21); ?>S</a>
     </div>
 
 </div>
