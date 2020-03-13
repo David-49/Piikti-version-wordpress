@@ -6,32 +6,6 @@ add_theme_support('post-thumbnails');
 // Ajouter automatiquement le titre du site dans l'en-tête du site
 add_theme_support('title-tag');
 
-add_theme_support('wc-product-gallery-zoom');
-add_theme_support('wc-product-gallery-lightbox');
-add_theme_support('wc-product-gallery-slider');
-
-// function mytheme_add_woocommerce_support()
-// {
-//     add_theme_support('woocommerce');
-// }
-// add_action('after_setup_theme', 'mytheme_add_woocommerce_support');
-
-
-/**
- * Set WooCommerce image dimensions upon theme activation
- */
-// Remove each style one by one
-add_filter('woocommerce_enqueue_styles', 'jk_dequeue_styles');
-function jk_dequeue_styles($enqueue_styles)
-{
-    unset($enqueue_styles['woocommerce-general']);	// Remove the gloss
-    unset($enqueue_styles['woocommerce-layout']);		// Remove the layout
-    unset($enqueue_styles['woocommerce-smallscreen']);	// Remove the smallscreen optimisation
-    return $enqueue_styles;
-}
-
-// Or just remove them all in one line
-add_filter('woocommerce_enqueue_styles', '__return_false');
 
 function init_styles()
 {
@@ -64,3 +38,51 @@ function modify_user_champ($user_contact)
 }
 
 add_filter('user_contactmethods', 'modify_user_champ');
+
+
+
+//déclaration custom post type: Produit et déclaration taxonomie
+function piikti_register_post_types()
+{
+    // CPT Produit
+    $labels = array(
+        'name' => 'Produit',
+        'all_items' => 'Tous les produits',  // affiché dans le sous menu
+        'singular_name' => 'Produit',
+        'add_new_item' => 'Ajouter un produit',
+        'edit_item' => 'Modifier le produit',
+        'menu_name' => 'Produit'
+    );
+
+    $args = array(
+        'labels' => $labels,
+        'public' => true,
+        'show_in_rest' => true,
+        'has_archive' => true,
+        'supports' => array( 'title', 'editor','thumbnail' ),
+        'menu_position' => 5,
+        'menu_icon' => 'dashicons-cart',
+        'page-attributes' => true,
+        'comments' => true,
+    );
+
+    register_post_type('produit', $args);
+
+    // Déclaration de la Taxonomie
+    $labels = array(
+        'name' => 'Type de produits',
+        'new_item_name' => 'Nom du nouveau produit',
+        'parent_item' => 'Type de produit parent',
+    );
+
+    $args = array(
+        'labels' => $labels,
+        'public' => true,
+        'show_in_rest' => true,
+        'hierarchical' => true,
+    );
+
+    register_taxonomy('type-projet', 'produit', $args);
+}
+// Le hook init lance la fonction
+add_action('init', 'piikti_register_post_types');

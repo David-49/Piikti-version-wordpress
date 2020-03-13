@@ -10,7 +10,7 @@
 
 <?php
 // echo "<p class='testt'>".the_term()."</p>";
-var_dump(get_terms('product_cat'));
+var_dump(get_terms('21'));
 ?>
 
 <div class="produitCatégorie">
