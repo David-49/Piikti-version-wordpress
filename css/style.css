@@ -17,6 +17,7 @@ html {
     font-family: quatro, sans-serif;
     font-weight: 400;
     font-style: normal;
+    color: #4D4D4D;
 }
 
 li {
@@ -39,16 +40,9 @@ font-style: normal;
 Quatro Regular Italic font-family: quatro, sans-serif;
 font-weight: 400;
 font-style: italic; */
-/* .menu {
-    position: fixed;
-    top: 0px;
-}
-
-.admin-bar .menu {
-	top: 32px;
-} */
 body {
-    height: 100vh;
+    height: 100%;
+    position: relative;
 }
 
 .header {
@@ -79,7 +73,7 @@ body {
 }
 
 .site__header__menu a {
-    color: black;
+    color: #4D4D4D;
     font-size: 1.8rem;
     text-decoration: none;
     font-family: quatro, sans-serif;
@@ -92,7 +86,7 @@ body {
 .info-connexion {
     position: absolute;
     z-index: 9999;
-    right: 100px;
+    right: 190px;
     top: 40%;
     transform: translateY(-50%);
     width: 120px;
@@ -102,6 +96,145 @@ body {
 
 .logoUser, .logoCaddie {
     height: 40px !important;
+    cursor: pointer;
+}
+
+/***************************************************************************/
+/*                               Animation pop-up connexion                */
+/***************************************************************************/
+/*popup avec les choix de connexions*/
+.calqueBlanc {
+    display: none;
+    position: absolute;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.95);
+}
+
+.blocUserConnect {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 60%;
+    height: 60%;
+    margin: auto;
+    margin-top: 32%;
+    transform: translateY(-50%);
+}
+
+.boutonUserConnect {
+    cursor: pointer;
+    font-size: 2rem;
+    font-weight: 700;
+    color: white;
+    background-color: #ee6e6b;
+    padding: 6px;
+    width: 100%;
+    text-align: center;
+}
+
+.popupUser {
+    display: none;
+    position: absolute;
+    z-index: 9999;
+    right: -80px;
+    top: 50px;
+    background-color: rgb(255, 255, 255);
+    border-top: solid #ee6e6b 8px;
+    margin-top: 2rem;
+    height: 236px;
+    width: 340px;
+    -webkit-box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.75);
+}
+
+/*flèche vers le haut pour la popup*/
+.popupUser::before {
+    position: absolute;
+    content: '';
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 15px solid #ee6e6b;
+    top: -22px;
+    right: 48%;
+}
+
+.blocConnexion {
+    display: none;
+    position: absolute;
+    z-index: 9999;
+    height: 523px;
+    width: 546px;
+    left: 50%;
+    top: 25%;
+    transform: translate(-50%, -50%);
+    -webkit-box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.75);
+}
+
+.blocInscription {
+    height: 811.08px;
+}
+
+.formConnexion {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: white;
+}
+
+.blocInfo {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+
+.legendConnexion {
+    font-size: 4.5rem;
+    font-weight: 700;
+    font-style: italic;
+    text-decoration: underline #ee6e6b;
+}
+
+.formConnexion label {
+    font-size: 2.2rem;
+    margin-bottom: 6px;
+    width: 100%;
+}
+
+.formConnexion input {
+    border: solid #ee6e6b 1px;
+    height: 43px;
+    font-size: 2rem;
+    padding: 4px;
+    width: 100%;
+}
+
+.mdpOublie {
+    color: #ee6e6b;
+    font-size: 1.5rem;
+}
+
+.lienReset {
+    font-size: 1.5rem;
+    text-decoration: underline;
+}
+
+.boutonConnexion {
+    background-color: #ee6e6b;
+    color: white;
+    font-size: 2rem;
+    font-weight: 700;
+    padding: 12px;
+    border: none;
 }
 
 .cadreImage {
@@ -120,7 +253,7 @@ body {
     bottom: 0;
     left: 0;
     right: 0;
-    z-index: 9997;
+    z-index: 9990;
 }
 
 .calque {
@@ -132,12 +265,12 @@ body {
     bottom: 0;
     left: 0;
     right: 0;
-    z-index: 9998;
+    z-index: 9991;
 }
 
 .blocDesc {
     position: absolute;
-    z-index: 9999;
+    z-index: 9993;
     top: 20%;
     left: 50%;
     transform: translateX(-50%);
@@ -194,7 +327,7 @@ body {
 
 .calqueNoir {
     position: absolute;
-    z-index: 9998;
+    z-index: 9990;
     top: 0;
     left: 0;
     right: 0;
@@ -204,7 +337,7 @@ body {
 
 .titreImage {
     position: absolute;
-    z-index: 9999;
+    z-index: 9991;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -349,7 +482,7 @@ body {
 
 .titrePageCreateurs {
     position: absolute;
-    z-index: 9999;
+    z-index: 9991;
     font-size: 5.5rem;
     font-weight: 700;
     font-style: italic;
@@ -401,7 +534,7 @@ body {
 
 .calqueCadreCreateurs {
     position: absolute;
-    z-index: 9998;
+    z-index: 9991;
     top: 0;
     left: 0;
     right: 0;
@@ -417,7 +550,7 @@ body {
     font-weight: 700;
     font-style: italic;
     position: absolute;
-    z-index: 9999;
+    z-index: 9992;
     left: 50%;
     transform: translateX(-50%);
     bottom: 15%;
